@@ -996,9 +996,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 979188043}
-  - component: {fileID: 979188042}
-  - component: {fileID: 979188045}
   - component: {fileID: 979188044}
+  - component: {fileID: 979188042}
   m_Layer: 0
   m_Name: Gun
   m_TagString: Untagged
@@ -1015,17 +1014,53 @@ MonoBehaviour:
   m_GameObject: {fileID: 979188041}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd6dc5da31f655a41bc3e6111834c7cc, type: 3}
+  m_Script: {fileID: 11500000, guid: 0b26e1a99e334a84d821ed9b65f7cfb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BulletPrefab: {fileID: 3425944680815697688, guid: 4e3f325e6c2e0124eaa02e1dc3096e9a,
-    type: 3}
-  barrel: {fileID: 1345496240}
   cam: {fileID: 963194225}
-  bulletForce: 100
-  recoil: 5
-  magazineSize: 12
-  gunAim: {fileID: 979188044}
+  character: {fileID: 29417793}
+  recoilCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.09129231
+      value: 0.91541165
+      inSlope: 4.8460855
+      outSlope: 4.8460855
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.07780954
+    - serializedVersion: 3
+      time: 0.3780393
+      value: 0.90752876
+      inSlope: -0.106897175
+      outSlope: -0.106897175
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 1
+    - serializedVersion: 3
+      time: 0.49996948
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!4 &979188043
 Transform:
   m_ObjectHideFlags: 0
@@ -1043,40 +1078,25 @@ Transform:
   m_Father: {fileID: 963194228}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &979188044
-Animator:
-  serializedVersion: 3
+--- !u!114 &979188044
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 979188041}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e2c56fb92f8cc814bbe9a070a3294e5e, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!111 &979188045
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 979188041}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 02eb6f490290e75449cf4dc3a9b5099e, type: 2}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 0
-  m_AnimatePhysics: 0
-  m_CullingType: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 537066fbe6453c242bbf00d9c37da324, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BulletPrefab: {fileID: 3425944680815697688, guid: 4e3f325e6c2e0124eaa02e1dc3096e9a,
+    type: 3}
+  barrel: {fileID: 1345496240}
+  bulletForce: 1000
+  recoil: 10
+  magazineSize: 12
+  recoilScript: {fileID: 979188042}
 --- !u!1 &1012860931
 GameObject:
   m_ObjectHideFlags: 0
