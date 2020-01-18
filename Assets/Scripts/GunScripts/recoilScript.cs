@@ -5,10 +5,8 @@ using UnityEngine;
 public class recoilScript : MonoBehaviour {
 
     [SerializeField] private GameObject cam;
-    [SerializeField] private GameObject character;
     [SerializeField] private AnimationCurve recoilCurve;
 
-    private float speed = 100f;
 
     public void addRecoil(float recoil) {
         StopCoroutine(gunRecoil(recoil));

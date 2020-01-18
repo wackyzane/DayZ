@@ -1095,8 +1095,10 @@ MonoBehaviour:
   barrel: {fileID: 1345496240}
   bulletForce: 1000
   recoil: 10
+  attackSpeed: 0
   magazineSize: 12
   recoilScript: {fileID: 979188042}
+  fireMode: []
 --- !u!1 &1012860931
 GameObject:
   m_ObjectHideFlags: 0
